@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: user-service
+# 8001,    8101,    8201
+  cloud:
+    config:
+      override-none: true
+server:
+  port: 8101
+
+
+# 自定义配置属性
+# 用户的 demo 数据
+# "[{7, abc, 123}, {8}, {9}]"
+sp:
+  user-service:
+    users: "[{\"id\":7, \"username\":\"abc\",\"password\":\"123\"},
+             {\"id\":8, \"username\":\"def\",\"password\":\"456\"},
+             {\"id\":9, \"username\":\"ghi\",\"password\":\"789\"}]"
+
+eureka:
+  client:
+    service-url:
+      #可以从云服务商购买不同地点的注册中心服务器
+      #自己搭建的注册中心职能使用 defaultZone
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
