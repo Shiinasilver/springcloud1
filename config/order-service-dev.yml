@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: order-service
+# 8001,   8101,   8201
+server:
+  port: 8201
+eureka:
+  client:
+    service-url:
+      #可以从云服务商购买不同地点的注册中心服务器
+      #自己搭建的注册中心职能使用 defaultZone
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+ribbon:
+  # 默认值
+  MaxAutoRetries: 0 # 单台服务器不重试
+  MaxAutoRetriesNextServer: 1 #更换1次服务器，禁用重试都设置成0

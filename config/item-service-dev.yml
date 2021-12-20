@@ -1,0 +1,17 @@
+# application.yml
+# yml - yaml - yet another markup language
+# 腋毛
+
+# 向注册中心注册的名字
+spring:
+  application:
+    name: item-service
+# item 8001,   user 8101,   order 8201
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      #可以从云服务商购买不同地点的注册中心服务器
+      #自己搭建的注册中心职能使用 defaultZone
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
