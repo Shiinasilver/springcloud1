@@ -1,0 +1,7 @@
+# eureka2001, zuul3001, 4001, 5001, 6001
+server:
+  port: 4001
+hystrix:
+  dashboard:
+    # 允许抓取日志的服务器列表
+    proxy-stream-allow-list: localhost

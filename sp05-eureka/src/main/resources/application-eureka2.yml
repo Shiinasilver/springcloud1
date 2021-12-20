@@ -1,0 +1,13 @@
+# application-eureka2.yml
+# 启动参数激活eureka2： --spring.profiles.active=eureka2
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka1:2001/eureka
+
+server:
+  port: 2002
